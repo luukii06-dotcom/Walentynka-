@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Walentynka 💘</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    button {
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #yes {
+      background: #2ecc71;
+      color: white;
+    }
+
+    #no {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .success {
+      font-size: 26px;
+      color: #e91e63;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h1>Czy zostaniesz moją walentynką? 💘</h1>
+    <div class="buttons">
+      <button id="yes">TAK</button>
+      <button id="no">NIE</button>
+    </div>
+  </div>
+
+  <script>
+    let scale = 1;
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+    const card = document.getElementById("card");
+
+    noBtn.addEventListener("click", () => {
+      scale += 0.2;
+      yesBtn.style.transform = `scale(${scale})`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      card.innerHTML = `
+        <div class="success">
+          💖 Wiedziałem! 💖<br><br>
+          Szczęśliwych Walentynek 😘
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>
