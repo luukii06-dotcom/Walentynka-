@@ -23,6 +23,16 @@
       max-width: 400px;
       width: 90%;
     }
+    .teddy {
+      font-size: 80px;
+      margin-bottom: 10px;
+      animation: float 2s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
     h1 {
       margin-bottom: 30px;
       color: #333;
@@ -58,6 +68,7 @@
 </head>
 <body>
   <div class="card">
+    <div class="teddy">🧸</div>
     <h1>Zostaniesz moją Walentynką? ❤️</h1>
     <button id="yes">Tak</button>
     <button id="no">Nie</button>
